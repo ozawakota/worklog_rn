@@ -1,0 +1,509 @@
+@import "./reset";
+@import "./font";
+
+body {
+  color: #091331;
+  font-family: ryo-gothic-plusn, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.main {
+  padding-top: 200px;
+  position: relative;
+  @media screen and (max-width: 767px) {
+    padding-top: 100px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1360px;
+  margin: 20px auto 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  @media screen and (max-width: 767px) {
+    margin-top: 26px;
+    padding: 0 20px;
+  }
+  &-logo {
+    &__link {
+      font: normal normal 900 30px/36px Lato;
+      letter-spacing: 0.9px;
+      color: #14224B;
+      @media screen and (max-width: 767px) {
+        font: normal normal bold 20px/24px Lato;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
+  &-menu {
+    @media screen and (min-width: 768px) {
+      display: block!important;
+      margin-left: auto;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      padding: 20px 20px 40px;
+      background: #091331 0% 0% no-repeat padding-box;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    &-btn {
+      @media screen and (max-width: 767px) {
+        width: 20px;
+        height: 10px;
+        margin-left: auto;
+        position: relative;
+      }
+      &::before,
+      &::after {
+        @media screen and (max-width: 767px) {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #091331 0% 0% no-repeat padding-box;
+          position: absolute;
+          right: 0;
+          left: 0;
+        }
+      }
+      &::before {
+        @media screen and (max-width: 767px) {
+          top: 0;
+        }
+      }
+      &::after {
+        @media screen and (max-width: 767px) {
+          bottom: 0;
+        }
+      }
+    }
+    &-logo {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: block;
+        height: 24px;
+      }
+      &__img {
+        @media screen and (max-width: 767px) {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+    &-close-btn {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: block;
+        width: 38px;
+        height: 38px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+      }
+      &::before,
+      &::after {
+        @media screen and (max-width: 767px) {
+          content: "";
+          display: block;
+          width: 15px;
+          height: 2px;
+          margin: auto;
+          background: #091331 0% 0% no-repeat padding-box;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &::before {
+        @media screen and (max-width: 767px) {
+          transform: rotateZ(45deg);
+        }
+      }
+      &::after {
+        @media screen and (max-width: 767px) {
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+    &-sns-links {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: flex;
+        padding: 0 20px;
+      }
+      &__item {
+        @media screen and (max-width: 767px) {
+          display: flex;
+          width: 40px;
+          height: 40px;
+        }
+        &:not(:first-child) {
+          @media screen and (max-width: 767px) {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+  &-nav {
+    margin-left: 80px;
+    @media screen and (max-width: 767px) {
+      margin-left: 0;
+    }
+    &__list {
+      display: flex;
+      @media screen and (max-width: 767px) {
+        display: block;
+        padding: 50px 20px;
+      }
+      &-item {
+        &:not(:first-child) {
+          margin-left: 40px;
+          @media screen and (max-width: 767px) {
+            margin-top: 30px;
+            margin-left: 0;
+          }
+        }
+        &-link {
+          padding-bottom: 2px;
+          color: #091331;
+          font-size: 16px;
+          letter-spacing: 0.13px;
+          line-height: 1.5;
+          position: relative;
+          @media screen and (max-width: 767px) {
+            font: normal normal bold 22px/33px Lato;
+            letter-spacing: 0.24px;
+            color: #FFFFFF;
+          }
+          &--active {
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: #091331;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              @media screen and (max-width: 767px) {
+                content: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  padding-top: 40px;
+  background: #091331;
+  color: #ffffff;
+  @media screen and (max-width: 767px) {
+    padding: 30px 20px;
+  }
+  &-inner {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 20px 0 25px;
+    border-top: 1px solid #ffffff;
+    @media screen and (max-width: 767px) {
+      padding: 40px 0 0;
+    }
+  }
+  &-main {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      flex-direction: row-reverse;
+    }
+    &__company-name {
+      font-size: 24px;
+      letter-spacing: 0.29px;
+      line-height: 1.5;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+    &__link {
+      margin-left: auto;
+      font-size: 14px;
+      letter-spacing: 0.1px;
+      line-height: 1.714;
+      @media screen and (max-width: 767px) {
+        font: normal normal bold 12px/18px Ryo Gothic PlusN;
+        letter-spacing: 0.07px;
+      }
+    }
+    &__sns {
+      display: flex;
+      margin-left: 90px;
+      @media screen and (max-width: 767px) {
+        margin-left: 0;
+      }
+      &-item {
+        width: 50px;
+        height: 50px;
+        @media screen and (max-width: 767px) {
+          width: 30px;
+          height: 30px;
+        }
+        &:not(:first-child) {
+          margin-left: 10px;
+          @media screen and (max-width: 767px) {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+  &__copyright {
+    font-size: 10px;
+    letter-spacing: 0.05px;
+    @media screen and (max-width: 767px) {
+      margin-top: 40px;
+      font: normal normal bold 10px/24px Ryo Gothic PlusN;
+      letter-spacing: 0.05px;
+    }
+  }
+}
+
+.page-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  bottom: 20px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  &__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #264065;
+    border-radius: 50%;
+    position: relative;
+    &::after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin: auto;
+      background: url("../images/arrow_backtotop-black.svg");
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.cursor,
+.follower {
+  border-radius: 50%;
+  position: absolute; //bodyの一番左上になるように配置する
+  top: 0;
+  left: 0;
+  cursor: none; //もともとあるカーソルは見えなくなるようにする
+  pointer-events: none; //他の要素がクリックできなくならないように
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  z-index: 1001; //どの要素よりも一番上になるようにする
+}
+
+.follower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(#000000, .5);
+  z-index: 1000;
+  transition: transform ease .1s;
+  text-align: center;
+  top: -40px;
+  left: -40px;
+  span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    transform: scale(0);
+  }
+  &.is-active {
+    transform: scale(3);
+  }
+}
+
+.page-back {
+  max-width: 1360px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  &.position-top {
+    top: 120px;
+    @media screen and (max-width: 767px) {
+      padding: 0 20px;
+      position: static;
+    }
+  }
+  &__link {
+    display: inline-block;
+    align-items: center;
+    padding-left: 44px;
+    color: #091331;
+    font-size: 16px;
+    letter-spacing: 0.13px;
+    line-height: 1.5;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      padding-left: 31px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: auto 0;
+      background: url("../images/arrow_back-black.svg") no-repeat center / contain;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      @media screen and (max-width: 767px) {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+  min-height: 60px;
+  padding: 10px 45px;
+  border-radius: 5px;
+  position: relative;
+  @media screen and (max-width: 767px) {
+    min-width: 240px;
+    min-height: 50px;
+  }
+}
+
+.form {
+  max-width: 640px;
+  margin: 50px auto 0;
+  &__part {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 1.714;
+  }
+  &__input {
+    width: 100%;
+    padding: 12px 20px;
+    background: #ffffff;
+    border-radius: 2px;
+    color: #091331;
+    font-family: ryo-gothic-plusn, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+  }
+  &__select {
+    min-width: 320px;
+    padding: 12px 50px 12px 20px;
+    background: #ffffff;
+    border-radius: 2px;
+    color: #091331;
+    font-family: ryo-gothic-plusn, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+    cursor: pointer;
+    &-wrapper {
+      display: inline-block;
+      position: relative;
+      &::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin: auto;
+        border-right: 2px solid #9298a4;
+        border-bottom: 2px solid #9298a4;
+        transform: rotateZ(45deg);
+        position: absolute;
+        top: 0;
+        right: 20px;
+        bottom: 4px;
+      }
+    }
+  }
+  &__textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 20px;
+    background: #ffffff;
+    border-radius: 2px;
+    color: #091331;
+    font-family: ryo-gothic-plusn, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+  }
+  &__btn {
+    margin-top: 50px;
+    text-align: center;
+    .btn {
+      color: #091331;
+      background: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="loading" transform="translate(-690 -630)">
+    <g id="楕円形_143" data-name="楕円形 143" transform="translate(690 630)" fill="none" stroke="#264065" stroke-width="0.5" opacity="0.3">
+      <circle cx="30" cy="30" r="30" stroke="none"/>
+      <circle cx="30" cy="30" r="29.75" fill="none"/>
+    </g>
+    <g id="楕円形_144" data-name="楕円形 144" transform="translate(690 630)" fill="none" stroke="#264065" stroke-width="0.5" stroke-dasharray="47.1">
+      <circle cx="30" cy="30" r="30" stroke="none"/>
+      <circle cx="30" cy="30" r="29.75" fill="none"/>
+    </g>
+  </g>
+</svg>
