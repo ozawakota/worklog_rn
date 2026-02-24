@@ -52,6 +52,11 @@ $(function () {
       prevArrow: '<button class="slick__prev"></button>',
       nextArrow: '<button class="slick__next"></button>',
       dots: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '50vw',
+      initialSlide: 1,
       responsive: [
         {
           breakpoint: 768,
