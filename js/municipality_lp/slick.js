@@ -48,7 +48,7 @@ $(function () {
       autoplay: false,
       speed: 1000,
       variableWidth: true,
-      infinite: true,
+      infinite: false,
       prevArrow: '<button class="slick__prev"></button>',
       nextArrow: '<button class="slick__next"></button>',
       dots: false,

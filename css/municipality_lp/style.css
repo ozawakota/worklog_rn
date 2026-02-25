@@ -480,7 +480,9 @@ h2{
       }
     }
 
-    
+    .slick-list {
+      overflow: visible;
+    }
     .slick__inner {
       width: min(100%, 1120px);
       margin: 0 auto;
