@@ -462,6 +462,12 @@ h2{
       width: 30px;
     }
   }
+
+  .slide-wrap{
+    overflow: visible;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
   .introduction_slick {
     .slick-slide {
       width: 280px;
@@ -484,16 +490,33 @@ h2{
       overflow: visible;
     }
     .slick__inner {
-      width: min(100%, 1120px);
-      margin: 0 auto;
-      padding: 0 0px 0 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+    }
+    
+    .slick-list {
+      overflow: visible !important;
     }
     
     .slick__container {
       position: relative;
-      width: calc(100% + (100vw - 100%) / 2);
+      width: 100%;
+      overflow: visible;
     }
-
+    
+    .slick__images {
+      overflow: visible;
+      padding-left: 0;
+    }
+    
+    .slick-track {
+      display: flex;
+    }
+    .slick-arrow {
+      margin-inline: 20px;
+    }
     .slick__prev,
     .slick__next {
 
@@ -518,11 +541,11 @@ h2{
     }
     
     .slick__prev {
-      right: calc((100vw - 100%) + (30px + 12px));
+      right: calc(max((100vw - 1120px) / 2, 32px) + (30px + 12px));
     }
     
     .slick__next {
-      right: calc((100vw - 100%) + (0px));
+      right: calc(max((100vw - 1120px) / 2, 32px));
     }
     
     .slick__prev:before,
@@ -557,6 +580,10 @@ h2{
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
+      width: min(100%, 1020px);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 32px;
     
       .slick-num {
         font-size: 14px;
