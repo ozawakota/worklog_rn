@@ -48,7 +48,7 @@ $(function () {
       autoplay: false,
       speed: 1000,
       variableWidth: true,
-      infinite: false,
+      infinite: true,
       prevArrow: '<button class="slick__prev"></button>',
       nextArrow: '<button class="slick__next"></button>',
       dots: false,
@@ -71,6 +71,10 @@ $(function () {
       // スライド切り替え前にカウントとバーを更新
       $slickNum.find(".now-count").text(nextSlide + 1);
       updateProgressBar(nextSlide, slick.slideCount, $progressBar);
+      
+      // ナビゲーション使用時に擬似要素を非表示
+      var $introSection = $('#introduction');
+      $introSection.addClass('hide-pseudo');
     });
 
     // プログレスバー更新用関数
